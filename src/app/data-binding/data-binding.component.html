@@ -1,18 +1,68 @@
 <section>
 
-  <article>
+  <!-- <article>
     <h3>Interpolation</h3>
     <p>String rendered through interpolation: {{ url }}</p>
     <p>Resultado de 1 + 1 é: {{ 1+1 }} </p>
     <p>Resultado de 1 + 1 não é: {{1+1 + getValor()}} </p>
     <p>Angular course and angular like {{angularCourse && getLikeCourse()}} </p>
     <p></p>
-  </article>
+  </article> -->
 
   <article>
     <h3>Property binding</h3>
-    <img src="{{ imageUrl}}">
+    <!-- <img src="{{ imageUrl}}"> -->
     <img [src]="imageUrl">
+  </article>
+
+  <article>
+    <h3>Class e Style binding</h3>
+    <div>
+      Selecione uma classe:
+      <select #class (change)="0">
+        <option value = "alert-success">Success</option>
+        <option value = "alert-info">Info</option>
+        <option value = "alert-warning">Warning</option>
+        <option value = "alert-danger">Danger</option>
+      </select>
+      <br><br>
+
+      <div class = "alert {{ class.value }} " role = "alert">
+        Text colored according to selected option
+      </div>
+
+      <div
+        class = "alert"
+        role = "alert"
+        [class.alert-success] = "class.value == 'alert-success'">
+        Success
+      </div>
+      <div
+        class = "alert"
+        role = "alert"
+        [class.alert-info] = "class.value == 'alert-info'">
+        Info
+      </div>
+      <div
+        class = "alert"
+        role = "alert"
+        [class.alert-warning] = "class.value == 'alert-warning'">
+        Warning
+      </div>
+      <div
+        class = "alert"
+        role = "alert"
+        [class.alert-danger] = "class.value == 'alert-danger'">
+        Danger
+      </div>
+
+      <div
+        class = "alert"
+        role = "alert"
+        [style.display] = "class.value == 'alert-danger' ? 'block' : 'none'">
+        This text only show up on danger
+      </div>
+    </div>
   </article>
 
 </section>
