@@ -6,6 +6,13 @@
     <p>Resultado de 1 + 1 é: {{ 1+1 }} </p>
     <p>Resultado de 1 + 1 não é: {{1+1 + getValor()}} </p>
     <p>Angular course and angular like {{angularCourse && getLikeCourse()}} </p>
+    <p></p>
+  </article>
+
+  <article>
+    <h3>Property binding</h3>
+    <img src="{{ imageUrl}}">
+    <img [src]="imageUrl">
   </article>
 
 </section>
