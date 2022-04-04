@@ -101,7 +101,8 @@
   </article>
 
 </section> -->
-<section>
+<!-- <section>
+
 
   <article>
 
@@ -118,10 +119,10 @@
           [ngModel] = "name"
           (ngModelChange) = "name = $any($event)">
 
-        <input type="text" [(ngModel)] = "name">
+        <input type="text" [(ngModel)] = "name"> -->
         <!-- Banana in a box -->
 
-        <p>Você digitou: {{ name }} </p>
+        <!--<p>Você digitou: {{ name }} </p>
 
       </div>
 
@@ -136,4 +137,13 @@
 
   </article>
 
+</section> -->
+
+<section>
+  <article>
+    <h3>Input/Output properties</h3>
+
+    <app-course [name]="courseName"></app-course>
+
+  </article>
 </section>
